@@ -16,7 +16,7 @@
 
     html, body {
       width: 100%;
-      height: 100%;
+      height: 2000px;
       /*overflow: hidden;*/
       background: #232528;
     }
@@ -194,6 +194,40 @@
       border-bottom: 2px #fff solid;
       margin-top: 20%;
     }
+
+    .circle {
+/*      z-index: 20;*/
+  border: 1px dashed #c9c9c9;
+  width:700px;
+  height:700px;
+  border-radius:50%;
+/*  margin: auto auto;*/
+  position: fixed;
+/*  left:35%;
+  top:30%;*/
+/*  margin-left: -80px;*/
+/*  margin-top: 5%;*/
+/*  position:fixed;*/
+}
+
+.clock {
+      color: #c9c9c9;
+    }
+    .clock div {
+      height: 20px;
+      text-align: center;
+      vertical-align: middle;
+      position: fixed;;
+    }
+
+    .circle div button {
+      background-color: Transparent;
+      border-color: #adadad;
+      padding: 10px 20px;
+      border-radius: 8px;
+      border-style: solid;
+      text-align: center;
+    }
   </style>
 
   <script src="https://use.typekit.net/nlq1kdt.js"></script>
@@ -234,7 +268,7 @@
     </section>
   </div>
 
-  <div id="scroll">
+<!--   <div id="scroll">
     <div data-aos="fade-in" data-aos-offset="10" style="margin-top: 30%;">
       <div class="arrow"></div>
     </div>
@@ -278,7 +312,56 @@
         尽情狂舞 自由漫步
       </button>
     </div>
-  </div>
+  </div> -->
+
+<!--   <div class="circle">
+  </div> -->
+
+  <div class="circle">
+      <div style="margin-top:-3%;">
+        <button class="left" style="color:#c9c9c9;" id="s1">
+          我遇见我 冰和沙漠有何不可
+        </button>
+      </div> 
+      <div style="top:50%;right:-75px;position:absolute;">
+        <button class="right" style="color:#c9c9c9;" id="s2">
+          尽情狂舞 自由漫步
+        </button>
+      </div>
+      <div style="margin-top:93%;">
+        <button class="left" style="color:#c9c9c9;" id="s1">
+          我遇见我 冰和沙漠有何不可
+        </button>
+      </div> 
+      <div style="top:50%;left:-75px;position:absolute;">
+        <button class="right" style="color:#c9c9c9;" id="s2">
+          尽情狂舞 自由漫步
+        </button>
+      </div>
+<!--       <div>o</div>
+      <div>01</div>
+      <div>o</div>
+      <div>02</div>
+      <div>o</div>
+      <div>03</div>
+      <div>o</div>
+      <div>04</div>
+      <div>o</div>
+      <div>05</div>
+      <div>o</div>
+      <div>06</div>
+      <div>o</div>
+      <div>07</div>
+      <div>o</div>
+      <div>08</div>
+      <div>o</div>
+      <div>09</div>
+      <div>o</div>
+      <div>10</div>
+      <div>o</div>
+      <div>11</div>
+      <div>o</div> -->
+    </div>
 
   <div id="footer">
     <a href="http://twitter.com/_rishabhp">By L-i-s-h</a>
@@ -302,6 +385,8 @@
     }
   </script> -->
 
+  <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+  <script src="{% static 'main/circle.js' %}"></script>
   <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
   <script>
     AOS.init();

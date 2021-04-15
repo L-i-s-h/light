@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1" name="viewport">
-  <title>ZZH</title>
+  <title>我遇见我</title>
   <meta name="keywords" content="css3, html5, js, background video, fullscreen video">
   <meta name="description" content="Super easy to implement HTML5 fullscreen background video library in JavaScript.">
   <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
@@ -16,7 +16,7 @@
 
     html, body {
       width: 100%;
-      height: 2000px;
+      height: 100%;
       /*overflow: hidden;*/
       background: #232528;
     }
@@ -36,7 +36,7 @@
       /*transform: translateX(calc((100% - 100vw) / 2));*/
 
       object-fit: cover;
-      min-height: 100%; 
+      height: 100%; 
       width: 100%;
 
       z-index: -10;
@@ -47,7 +47,7 @@
 
       width: 100%; min-height: 100%;
 
-      background: url({% static 'main/cover.png' %}) no-repeat;
+      background: url({% static 'imeetme/video.png' %}) no-repeat;
       background-size: cover;
       background-position: center;
     }
@@ -183,50 +183,34 @@
       float: right;
     }
 
-    .arrow {
-      display: inline-block;
-      width: 20px;
-      height: 20px;
-      -webkit-transform: rotate(45deg);
-      border-left: none;
-      border-top: none;
-      border-right: 2px #fff solid;
-      border-bottom: 2px #fff solid;
-      margin-top: 20%;
-    }
-
-    .circle {
-/*      z-index: 20;*/
-  border: 1px dashed #c9c9c9;
-  width:600px;
-  height:600px;
-  border-radius:50%;
-/*  margin: auto auto;*/
-  position: fixed;
-/*  left:35%;
-  top:30%;*/
-/*  margin-left: -80px;*/
-/*  margin-top: 5%;*/
-/*  position:fixed;*/
+    .box {
+    display: inline-block;
+    padding-bottom: 40px;
+    margin-bottom: 50px;
+    margin: 0px 10px 50px 10px;
+    min-height: 450px;
+    width: 40%;
+    vertical-align: top;
+    border: 2px solid #D04D5D;
 }
 
-.clock {
-      color: #c9c9c9;
-    }
-    .clock div {
-      height: 20px;
-      text-align: center;
-      vertical-align: middle;
-      position: fixed;;
+    .box iframe {
+      width: 100%;
+      height: 400px;
+      margin-top: 20px;
     }
 
-    .circle div button {
-      background-color: Transparent;
-      border-color: #adadad;
-      padding: 10px 20px;
-      border-radius: 8px;
-      border-style: solid;
-      text-align: center;
+    .box ul {
+      color: white;
+      display: inline-block;
+      text-align: left;
+      margin-top: 20px;
+      width: 70%;
+      opacity: 0.7;
+    }
+
+    .box a {
+      color: white;
     }
   </style>
 
@@ -236,8 +220,8 @@
 
 <body>
   <div id="container">
-    <video id="background_video" poster="{% static 'main/cover.png' %}" loop muted autoplay>
-      <source src="{% static 'main/index.mp4' %}" type="video/mp4">
+    <video id="background_video" loop muted autoplay>
+      <source src="{% static 'imeetme/video.mp4' %}" type="video/mp4">
     </video>
 <!--     <div id="video_cover"></div> -->
     <div id="overlay"></div>
@@ -250,123 +234,84 @@
         <img src="https://github.com/rishabhp/bideo.js/blob/master/pause.png">
       </span>
     </div>
-
-    <section id="main_content">
-      <div id="head">
-        <img src="{% static 'main/zzh_liguofu.png' %}" alt="zzh">
-        <!-- <p class="info">(Hold on! The video might take a while to load.)</p> -->
-      </div>
-      <div>
-        <img src="{% static 'main/qmkj_langman.png' %}" alt="qmkj">
-      </div>
-
-<!--       <div id="links">
-        <a href="https://github.com/rishabhp/bideo.js">View on Github</a>
-        <a href="http://codetheory.in/html5-fullscreen-background-video/">How it works</a>
-      </div> -->
-
-    </section>
   </div>
 
-<!--   <div id="scroll">
-    <div data-aos="fade-in" data-aos-offset="10" style="margin-top: 30%;">
+  <div id="scroll" style="margin-top: 3%;">
+    <div>
+      <img src="{% static 'imeetme/imeetme_xingshushufa.png' %}" alt="imeetme">
+
+    </div>
+    <!-- <h1 style="color:#c9c9c9;margin-bottom:20px;">我遇见我 冰和沙漠有何不可</h1> -->
+
+<!--     <div data-aos="fade-in" data-aos-offset="10" style="margin-top: 30%;">
       <div class="arrow"></div>
+    </div> -->
+    
+    <div class="box" data-aos="fade-right" data-aos-offset="300">
+      <p style="color:#c9c9c9;margin-top:3%;">山河令 2021-02 周子舒</p>
+      <ul>
+        <li>
+          <a href="https://v.youku.com/v_show/id_XNTEwMTg0NjE5Mg==.html?spm=a2h0c.8166622.PhoneSokuProgram_1.dtitle&s=ceba4745ea10415eb791" target="_blank">点击这里去优酷观看全集~</a>
+        </li>
+        <li>
+          <a href="https://www.youtube.com/watch?v=LUl2X99y6KM" target="_blank">【海外党】- 点击这里去youtube观看全集~</a>
+        </li>
+        <li>
+          <a href="https://v.youku.com/v_show/id_XNTEzNTU5NTE0OA==.html?spm=a2h0c.8166622.PhoneSokuProgram_1.dtitle&s=dbed05934bb84dd582a1" target="_blank">点击这里去优酷观看番外~</a>
+        </li>
+      </ul>
     </div>
-    <div>
-      <button class="left" style="color:#c9c9c9;margin-top:20%;" id="s1" data-aos="fade-in" data-aos-offset="10">
-        我遇见我 冰和沙漠有何不可
-      </button>
-    </div>
-    <div>
-      <button class="right" style="color:#c9c9c9;margin-top:100px;" id="s2" data-aos="fade-in" data-aos-offset="50">
-        尽情狂舞 自由漫步
-      </button>
-    </div>
-    <div>
-      <button class="left" style="color:#c9c9c9;margin-top:20%;" id="s1" data-aos="fade-in" data-aos-offset="10">
-        我遇见我 冰和沙漠有何不可
-      </button>
-    </div>
-    <div>
-      <button class="right" style="color:#c9c9c9;margin-top:100px;" id="s2" data-aos="fade-in" data-aos-offset="50">
-        尽情狂舞 自由漫步
-      </button>
-    </div>
-    <div>
-      <button class="left" style="color:#c9c9c9;margin-top:20%;" id="s1" data-aos="fade-in" data-aos-offset="10">
-        我遇见我 冰和沙漠有何不可
-      </button>
-    </div>
-    <div>
-      <button class="right" style="color:#c9c9c9;margin-top:100px;" id="s2" data-aos="fade-in" data-aos-offset="50">
-        尽情狂舞 自由漫步
-      </button>
-    </div>
-    <div>
-      <button class="left" style="color:#c9c9c9;margin-top:20%;" id="s1" data-aos="fade-in" data-aos-offset="10">
-        我遇见我 冰和沙漠有何不可
-      </button>
-    </div>
-    <div>
-      <button class="right" style="color:#c9c9c9;margin-top:100px;" id="s2" data-aos="fade-in" data-aos-offset="50">
-        尽情狂舞 自由漫步
-      </button>
-    </div>
-  </div> -->
 
-<!--   <div class="circle">
-  </div> -->
-
-  <div class="circle">
-      <div style="margin-top:-3%;">
-        <img src="{% static 'main/rhopilema_esculentum_border_3.png' %}" alt="imeetme" width="200px">
-        <div style="color:#c9c9c9;">我遇见我</div>
-<!--         <button class="left" style="color:#c9c9c9;" id="s1">
-          我遇见我 冰和沙漠有何不可
-        </button> -->
-      </div> 
-      <div style="top:50%;right:-75px;position:absolute;">
-        <img src="{% static 'main/rhopilema_esculentum_border_3.png' %}" alt="imeetme" width="200px" style="transform:rotate(90deg);">
-        <button class="right" style="color:#c9c9c9;" id="s2">
-          尽情狂舞 自由漫步
-        </button>
-      </div>
-      <div style="margin-top:93%;">
-        <img src="{% static 'main/rhopilema_esculentum_border_3.png' %}" alt="imeetme" width="200px" style="transform:rotate(-45deg);">
-        <button class="left" style="color:#c9c9c9;" id="s1">
-          我遇见我 冰和沙漠有何不可
-        </button>
-      </div> 
-      <div style="top:50%;left:-75px;position:absolute;">
-        <img src="{% static 'main/rhopilema_esculentum_border_3.png' %}" alt="imeetme" width="200px" style="transform:rotate(60deg);">
-        <button class="right" style="color:#c9c9c9;" id="s2">
-          尽情狂舞 自由漫步
-        </button>
-      </div>
-<!--       <div>o</div>
-      <div>01</div>
-      <div>o</div>
-      <div>02</div>
-      <div>o</div>
-      <div>03</div>
-      <div>o</div>
-      <div>04</div>
-      <div>o</div>
-      <div>05</div>
-      <div>o</div>
-      <div>06</div>
-      <div>o</div>
-      <div>07</div>
-      <div>o</div>
-      <div>08</div>
-      <div>o</div>
-      <div>09</div>
-      <div>o</div>
-      <div>10</div>
-      <div>o</div>
-      <div>11</div>
-      <div>o</div> -->
+    <div class="box" data-aos="fade-left" data-aos-offset="300">
+       <p style="color:#c9c9c9;margin-top:3%;">如意芳霏 2020-10 徐晋</p>
+       <ul>
+        <li>
+          <a href="https://www.iqiyi.com/v_1oqcdx1i92c.html" target="_blank">点击这里去爱奇艺观看全集~</a>
+        </li>
+        <li>
+          <a href="https://www.youtube.com/watch?v=LUl2X99y6KM" target="_blank">【海外党】- 点击这里去youtube观看全集~</a>
+        </li>
+        <li>
+          <a href="https://v.youku.com/v_show/id_XNTEzNTU5NTE0OA==.html?spm=a2h0c.8166622.PhoneSokuProgram_1.dtitle&s=dbed05934bb84dd582a1" target="_blank">点击这里去优酷观看番外~</a>
+        </li>
+      </ul>
     </div>
+
+    <div class="box" data-aos="fade-right" data-aos-offset="300">
+       <p style="color:#c9c9c9;margin-top:3%;">谁都渴望遇见你 2020-02 张泯</p>
+       <a href="https://www.iqiyi.com/v_19rvvifl18.html" target="_blank">点击这里去爱奇艺观看全集~</a>
+    </div>
+
+    <div class="box" data-aos="fade-left" data-aos-offset="300">
+       <p style="color:#c9c9c9;margin-top:3%;">芸汐传 2018-06 龙非夜</p>
+       <a href="https://www.iqiyi.com/v_19rr0x6mik.html?spm=a2h0c.8166622.PhoneSokuProgram_1.dtitle&vfm=m_549_skss&fv=8c8453c816db6550" target="_blank">点击这里去爱奇艺观看全集~</a>
+    </div>
+
+<!--     <div>
+      <button class="left" style="color:#c9c9c9;margin-top:20%;" id="s1" data-aos="fade-in" data-aos-offset="10">
+        我遇见我 冰和沙漠有何不可
+      </button>
+    </div>
+
+    <div>
+      <button class="right" style="color:#c9c9c9;margin-top:100px;" id="s2" data-aos="fade-in" data-aos-offset="50">
+        尽情狂舞 自由漫步
+      </button>
+    </div>
+
+    <div>
+      <button class="left" style="color:#c9c9c9;margin-top:20%;" id="s1" data-aos="fade-in" data-aos-offset="10">
+        我遇见我 冰和沙漠有何不可
+      </button>
+    </div>
+
+    <div>
+      <button class="right" style="color:#c9c9c9;margin-top:100px;" id="s2" data-aos="fade-in" data-aos-offset="50">
+        尽情狂舞 自由漫步
+      </button>
+    </div> -->
+  </div>
+
 
   <div id="footer">
     <a href="http://twitter.com/_rishabhp">By L-i-s-h</a>
@@ -391,7 +336,7 @@
   </script> -->
 
   <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
-  <script src="{% static 'main/circle.js' %}"></script>
+<!--   <script src="{% static '/circle.js' %}"></script> -->
   <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
   <script>
     AOS.init();

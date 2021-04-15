@@ -1,8 +1,8 @@
 $(function() {
   console.log($(window).width());
 
-  var left = ($(window).width() - 700) / 2;
-  var top = ($(window).height() - 700) / 2;
+  var left = ($(window).width() - 600) / 2;
+  var top = ($(window).height() - 600) / 2;
   $(".circle").css({
       "top": top,
       "left": left,
